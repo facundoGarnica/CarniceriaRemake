@@ -1,0 +1,108 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#Panel {
+    -fx-background-color: linear-gradient(to bottom, #D72638, #A12B2B);
+}
+
+#BotonCrearVentas {
+    -fx-background-color: linear-gradient(to bottom, #FF0000, #B20000); /* Degradado rojo fuerte */
+    -fx-text-fill: white; /* Texto blanco */
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #8B0000; /* Borde rojo oscuro */
+    -fx-border-width: 4px; /* Aumentamos el grosor del borde */
+    -fx-cursor: hand; /* Cambia a mano al pasar */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 8, 0, 2, 2); /* Sombra para efecto 3D */
+}
+
+/* Efecto al pasar el mouse */
+#BotonCrearVentas:hover {
+    -fx-background-color: linear-gradient(to bottom, #FF4C4C, #D10000);
+    -fx-border-color: #FF4500; /* Borde naranja más brillante al pasar el mouse */
+    -fx-border-width: 4px; /* Aseguramos que el borde cambie al pasar */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Efecto al presionar */
+#BotonCrearVentas:pressed {
+    -fx-background-color: #8B0000;
+    -fx-border-color: #FFD700; /* Borde dorado al presionar */
+    -fx-border-width: 4px; /* Mantiene el grosor del borde */
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+.PaneTitulo {
+    
+    -fx-background-color: linear-gradient(to bottom, #FF4C4C, #FF8C8C); /* Degradado más intenso de rojo y rosa */
+    -fx-text-fill: white; /* Texto blanco para destacar sobre el fondo */
+    -fx-font-size: 30px; /* Tamaño de fuente del título */
+    -fx-font-weight: bold; /* Fuente en negrita para mayor impacto */
+    -fx-padding: 8px 20px; /* Más padding para un área más amplia alrededor del texto */
+    -fx-background-radius: 5px; /* Bordes mucho más redondeados */
+    
+    -fx-border-width: 5px; /* Borde grueso para que resalte */
+    -fx-border-radius:15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 6, 0, 2, 2); /* Sombra sutil para efecto 3D */
+}
+
+/* Efecto hover */
+.PaneTitulo:hover {
+    -fx-background-color: linear-gradient(to bottom, #FF2D2D, #FF6B6B); /* Fondo ligeramente más oscuro */
+    -fx-cursor: hand; /* Cursor de mano para indicar que es clickeable */
+    -fx-scale-x: 1.05; /* Escala ligeramente más grande */
+    -fx-scale-y: 1.05; /* Escala ligeramente más grande */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 6, 0, 2, 2); /* Sombra más notoria para el hover */
+}
+
+.LetrasTitulo {
+    -fx-font-size: 33px;
+    -fx-font-weight: bold;
+    -fx-fill: linear-gradient(to right, #ffffff, #000000); /* Gradiente inicial blanco a negro */
+    -fx-cursor: hand; /* Hacer que el cursor cambie a mano */
+}
+.BotonesSeleccion {
+    -fx-background-color: linear-gradient(to right, #FF6A00, #FF9A8B); /* Degradado cálido con naranja y rosa claro */
+    -fx-text-fill: white; /* Texto blanco para destacar sobre el fondo */
+    -fx-font-size: 16px; /* Fuente moderada */
+    -fx-font-weight: bold; /* Negrita para dar énfasis */
+    -fx-padding: 0px 24px; /* Padding algo más grande para dar mayor espacio */
+    -fx-background-radius: 30px; /* Bordes más redondeados */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 4, 4); /* Sombra suave para mayor profundidad */
+}
+
+/* Efecto hover */
+.BotonesSeleccion:hover {
+    -fx-background-color: linear-gradient(to right, #FF5200, #FF7A8B); /* Fondo más oscuro y vibrante en hover */
+    -fx-cursor: hand; /* Cursor de mano */
+    -fx-scale-x: 1.08; /* Un leve agrandamiento en X */
+    -fx-scale-y: 1.08; /* Leve agrandamiento en Y */
+    -fx-border-radius: 30px; /* Asegura que el borde se mantenga redondeado en el hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 8, 0, 4, 4); /* Sombra más intensa para hover */
+}
+
+/* Efecto presionado (cuando se hace clic en el botón) */
+.BotonesSeleccion:pressed {
+    -fx-background-color: linear-gradient(to right, #FF3A00, #FF618B); /* Fondo aún más oscuro cuando se presiona */
+    -fx-border-radius: 30px; /* Bordes redondeados al presionar */
+    -fx-effect: inset 0 0 12px rgba(0, 0, 0, 0.6); /* Sombra interna para el efecto de presión */
+}
+.vbox {
+    -fx-background-color: linear-gradient(to right, #FF3A00, #FF5880);  /* Fondo ligeramente más oscuro */
+    -fx-border-color: #8B0000;  /* Borde oscuro */
+    -fx-border-width: 2px;  /* Grosor del borde */
+    -fx-background-radius: 20px;  /* Bordes redondeados */
+    -fx-border-radius: 20px;
+}
+.PanelClientes {
+    -fx-background-color: linear-gradient(to bottom, #D72638, #A12B2B);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 4);
+}
