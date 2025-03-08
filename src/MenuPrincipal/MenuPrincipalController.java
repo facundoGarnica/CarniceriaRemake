@@ -44,9 +44,14 @@ public class MenuPrincipalController implements Initializable {
 
     @FXML
     public void desplazarHaciaAbajo() {
+        // Cerrar vBoxOpciones1 y vBoxOpciones11 si están abiertos
         if (isVBoxVisible1) {
             cerrarVBox(vBoxOpciones1);
             isVBoxVisible1 = false;
+        }
+        if (isVBoxVisible2) {
+            cerrarVBox(vBoxOpciones11);
+            isVBoxVisible2 = false;
         }
 
         TranslateTransition translate = new TranslateTransition(Duration.millis(400), vBoxOpciones);
@@ -65,16 +70,21 @@ public class MenuPrincipalController implements Initializable {
 
     @FXML
     public void desplazarHaciaAbajo2() {
+        // Cerrar vBoxOpciones y vBoxOpciones11 si están abiertos
         if (isVBoxVisible) {
             cerrarVBox(vBoxOpciones);
             isVBoxVisible = false;
+        }
+        if (isVBoxVisible2) {
+            cerrarVBox(vBoxOpciones11);
+            isVBoxVisible2 = false;
         }
 
         TranslateTransition translate = new TranslateTransition(Duration.millis(400), vBoxOpciones1);
 
         if (!isVBoxVisible1) {
             vBoxOpciones1.setVisible(true);
-            translate.setToY(210);
+            translate.setToY(170);
             isVBoxVisible1 = true;
         } else {
             cerrarVBox(vBoxOpciones1);
@@ -86,10 +96,10 @@ public class MenuPrincipalController implements Initializable {
 
     @FXML
     public void desplazarHaciaAbajo3() {
-        // Si el primer o segundo menú está abierto, lo cerramos antes de abrir este
-        if (isVBoxVisible2) {
+        // Cerrar vBoxOpciones y vBoxOpciones1 si están abiertos
+        if (isVBoxVisible) {
             cerrarVBox(vBoxOpciones);
-            isVBoxVisible2 = false;
+            isVBoxVisible = false;
         }
         if (isVBoxVisible1) {
             cerrarVBox(vBoxOpciones1);
@@ -99,22 +109,23 @@ public class MenuPrincipalController implements Initializable {
         TranslateTransition translate = new TranslateTransition(Duration.millis(400), vBoxOpciones11);
 
         if (!isVBoxVisible2) {
-            vBoxOpciones11.setVisible(true);  // Mostrar el VBox
-            translate.setToY(200);  // Mueve el VBox a la posición visible
+            vBoxOpciones11.setVisible(true);
+            translate.setToY(260); // Mueve el VBox a la posición visible
             isVBoxVisible2 = true;
         } else {
-            cerrarVBox(vBoxOpciones11);  // Cerrar el VBox si ya está visible
+            cerrarVBox(vBoxOpciones11);
             isVBoxVisible2 = false;
         }
 
         translate.play();
     }
 
-    // Método para cerrar un VBox con animación
+// Método para cerrar un VBox con animación
     private void cerrarVBox(VBox vbox) {
         TranslateTransition translate = new TranslateTransition(Duration.millis(400), vbox);
         translate.setToY(-72); // Desplazar hacia arriba, fuera de la vista
         translate.setOnFinished(event -> vbox.setVisible(false)); // Ocultar el VBox después de la animación
         translate.play();
     }
+
 }

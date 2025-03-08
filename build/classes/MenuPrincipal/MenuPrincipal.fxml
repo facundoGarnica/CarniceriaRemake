@@ -15,17 +15,31 @@
    <children>
       <Pane id="Panel" prefHeight="1010.0" prefWidth="324.0">
          <children>
-            <VBox fx:id="vBoxOpciones1" layoutX="34.0" layoutY="319.0" prefHeight="174.0" prefWidth="256.0" spacing="25.0" styleClass="vbox">
+            <Pane layoutY="534.0" prefHeight="291.0" prefWidth="324.0" styleClass="PanelClientes">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="204.0" styleClass="BotonesSeleccion" text="Agregar producto">
-                     <VBox.margin>
-                        <Insets right="26.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="197.0" styleClass="BotonesSeleccion" text="Ver producto" />
+                  <VBox fx:id="vBoxOpciones11" prefHeight="189.0" prefWidth="256.0" spacing="25.0" styleClass="vbox" translateX="33.0" translateY="79.0" visible="false">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="169.0" styleClass="BotonesSeleccion" text="Anotar Medias" />
+                        <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="169.0" styleClass="BotonesSeleccion" text="Ver Medias" />
+                     </children>
+                     <padding>
+                        <Insets left="38.0" top="37.0" />
+                     </padding>
+                  </VBox>
+                  <Pane prefHeight="288.0" prefWidth="324.0" styleClass="PanelClientes">
+                     <children>
+                        <Button fx:id="ButtonClick111" layoutX="34.0" layoutY="225.0" mnemonicParsing="false" onAction="#desplazarHaciaAbajo3" prefHeight="55.0" prefWidth="256.0" styleClass="PaneTitulo" text="Media Res" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <VBox fx:id="vBoxOpciones1" layoutX="36.0" layoutY="355.0" prefHeight="170.0" prefWidth="256.0" spacing="25.0" styleClass="vbox" visible="false">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="173.0" styleClass="BotonesSeleccion" text="Agregar produc." />
+                  <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="169.0" styleClass="BotonesSeleccion" text="Ver producto" />
                </children>
                <padding>
-                  <Insets left="29.0" top="37.0" />
+                  <Insets left="38.0" top="37.0" />
                </padding>
             </VBox>
             <Pane layoutY="239.0" prefHeight="299.0" prefWidth="324.0" styleClass="PanelClientes">
