@@ -4,18 +4,30 @@
  */
 package MenuPrincipal;
 
+import BuscarVentas.VerVentasController;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class MenuPrincipalController implements Initializable {
+
+    @FXML
+    private Pane PanelPrincipal;
 
     @FXML
     private Label LetrasTitulo;
@@ -126,6 +138,49 @@ public class MenuPrincipalController implements Initializable {
         translate.setToY(-72); // Desplazar hacia arriba, fuera de la vista
         translate.setOnFinished(event -> vbox.setVisible(false)); // Ocultar el VBox después de la animación
         translate.play();
+    }
+
+    @FXML
+    public void abrirCrearVentas(ActionEvent event) {
+        try {
+            // Cargar el archivo FXML de la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/CrearVentas/crearVentas.fxml"));
+            Parent root = loader.load();
+
+            // Crear una nueva ventana (Stage)
+            Stage stage = new Stage();
+            stage.setTitle("Crear Ventas"); // Título de la ventana
+            stage.setScene(new Scene(root));
+            stage.show(); // Mostrar la nueva ventana
+
+            // Cerrar la ventana actual (la ventana de la que se hizo clic)
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            currentStage.close(); // Cerrar la ventana actual
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void invocarNuevaVentana() {
+        try {
+            // Cargar el FXML de ventana2
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/BuscarVentas/VerVentas.fxml"));
+            Parent root = loader.load();
+
+            // Obtener el controlador de ventana2 para manipularlo si es necesario
+            VerVentasController ventasController = loader.getController();
+
+            // Obtener el Pane de ventana2 que tiene el fx:id="contenedorPrincipal"
+            Pane contenedorVentana2 = ventasController.getContenedorPrincipal();
+
+            // Ahora agregar el Pane de ventana2 dentro del Pane de ventana1
+            PanelPrincipal.getChildren().add(contenedorVentana2);
+            cerrarVBox(vBoxOpciones11);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

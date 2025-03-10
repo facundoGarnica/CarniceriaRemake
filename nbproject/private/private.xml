@@ -5,8 +5,10 @@
         <group>
             <file>file:/C:/Users/garca/Documents/NetBeansProjects/Carniceria_Remake/src/MenuPrincipal/MenuPrincipalController.java</file>
             <file>file:/C:/Users/garca/Documents/NetBeansProjects/Carniceria_Remake/src/MenuPrincipal/MenuPrincipal.fxml</file>
-            <file>file:/C:/Users/garca/Documents/NetBeansProjects/Carniceria_Remake/src/MenuPrincipal/menuprincipal.css</file>
+            <file>file:/C:/Users/garca/Documents/NetBeansProjects/Carniceria_Remake/src/CrearVentas/CrearVentas.fxml</file>
             <file>file:/C:/Users/garca/Documents/NetBeansProjects/Carniceria_Remake/src/MainClass/CarniceriaRemake.java</file>
+            <file>file:/C:/Users/garca/Documents/NetBeansProjects/Carniceria_Remake/src/CrearVentas/crearventas.css</file>
+            <file>file:/C:/Users/garca/Documents/NetBeansProjects/Carniceria_Remake/src/CrearVentas/CrearVentasController.java</file>
         </group>
     </open-files>
 </project-private>

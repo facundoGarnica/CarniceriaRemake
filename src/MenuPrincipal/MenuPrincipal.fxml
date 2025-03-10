@@ -10,17 +10,18 @@
 
 <AnchorPane id="AnchorPane" prefHeight="1010.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuPrincipal.MenuPrincipalController">
     <stylesheets>
-        <URL value="@menuprincipal.css" />
+        <URL value="@../main/resources/estilo.css" />
     </stylesheets>
    <children>
-      <Pane id="Panel" prefHeight="1010.0" prefWidth="324.0">
+      <Pane prefHeight="1010.0" prefWidth="324.0" styleClass="PanelClientes">
          <children>
             <Pane layoutY="534.0" prefHeight="291.0" prefWidth="324.0" styleClass="PanelClientes">
                <children>
-                  <VBox fx:id="vBoxOpciones11" prefHeight="189.0" prefWidth="256.0" spacing="25.0" styleClass="vbox" translateX="33.0" translateY="79.0" visible="false">
+                  <VBox fx:id="vBoxOpciones11" layoutY="-1.0" prefHeight="213.0" prefWidth="256.0" spacing="25.0" styleClass="vbox" translateX="33.0" translateY="79.0">
                      <children>
                         <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="169.0" styleClass="BotonesSeleccion" text="Anotar Medias" />
                         <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="169.0" styleClass="BotonesSeleccion" text="Ver Medias" />
+                        <Button layoutY="1.0" mnemonicParsing="false" onAction="#invocarNuevaVentana" prefHeight="43.0" prefWidth="169.0" styleClass="BotonesSeleccion" text="Ver ventas" />
                      </children>
                      <padding>
                         <Insets left="38.0" top="37.0" />
@@ -28,7 +29,7 @@
                   </VBox>
                   <Pane prefHeight="288.0" prefWidth="324.0" styleClass="PanelClientes">
                      <children>
-                        <Button fx:id="ButtonClick111" layoutX="34.0" layoutY="225.0" mnemonicParsing="false" onAction="#desplazarHaciaAbajo3" prefHeight="55.0" prefWidth="256.0" styleClass="PaneTitulo" text="Media Res" />
+                        <Button fx:id="ButtonClick111" layoutX="34.0" layoutY="225.0" mnemonicParsing="false" onAction="#desplazarHaciaAbajo3" prefHeight="55.0" prefWidth="256.0" styleClass="PaneTitulo" text="Administrador" />
                      </children>
                   </Pane>
                </children>
@@ -64,12 +65,13 @@
             </VBox>
             <Pane prefHeight="240.0" prefWidth="324.0" styleClass="PanelClientes" />
             <Button fx:id="ButtonClick" layoutX="27.0" layoutY="179.0" mnemonicParsing="false" onAction="#desplazarHaciaAbajo" prefHeight="55.0" prefWidth="256.0" styleClass="PaneTitulo" text="Clientes" />
-            <Button id="BotonCrearVentas" layoutX="6.0" layoutY="12.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="313.0" text="Crear ventas">
+            <Button id="BotonCrearVentas" layoutX="6.0" layoutY="12.0" mnemonicParsing="false" onAction="#abrirCrearVentas" prefHeight="86.0" prefWidth="313.0" text="Crear ventas">
                <font>
                   <Font size="36.0" />
                </font>
             </Button>
          </children>
       </Pane>
+      <Pane id="PanelInvocar" fx:id="PanelPrincipal" layoutX="325.0" prefHeight="1010.0" prefWidth="1596.0" />
    </children>
 </AnchorPane>
